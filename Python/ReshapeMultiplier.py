@@ -18,6 +18,6 @@ for i in range(len(mSplit)):
     except:
         print("Out of Range")
 
-print(df)
-
-#theFile.write("%s\n" % out)
+writer = pd.ExcelWriter('InflationMultiplers_output.xlsx')
+df.to_excel(writer,'Sheet1')
+writer.save()
