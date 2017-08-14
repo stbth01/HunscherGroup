@@ -13,7 +13,7 @@ from tblStart
 drop table tblID
 
 create table tblID
-Select DGHID, TaxID as PropertyID, PropertyType
+Select DGHID, TaxID as PropertyID, ClientId, jurisdictionID , PropertyType, 1 as isActive
 from tblStart
 
 select *
@@ -56,8 +56,10 @@ drop table tblNotes
 
 create table tblNotes
 
-Select DGHID, Notes
+Select DGHID, Notes, '2016-30-06' as DateModified
 from tblStart
+
+
 
 
 select *
