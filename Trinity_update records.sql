@@ -154,12 +154,82 @@ where DGHID = '03-003-0162' ;
 insert into tblnotes
 values ('03-003-0162', 'real value', '2017-08-13');
 
-
+select *
+from tblnotes
+where ClientId = 3
+and isActive =1 ;
 
 
 
 
 /*
+insert into tblnotes
+select DGHID, Notes, '2017-10-14'
+from trinityExtra;*/
+
+/*
+insert into tblid
+select DGHID, PropertyID, ClientId, jurisdictionID, PropertyType, isActive
+from trinityExtra;*/
+
+select count(distinct DGHID)
+from tblid
+where ClientId = 3
+and isActive =1 ;
+
+update tblhistoricalvalue
+set HistoricalValueYear =2015
+where DGHID = '03-022-0211';
+
+/*
+update tblhistoricalvalue
+set HistoricalValue = 108734, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2016
+where DGHID = '03-033-0240' ;
+
+insert into tblnotes
+values ('03-033-0240', 'Historical value updated copied tv from other parcel on lot', '2017-10-15');
+update tblhistoricalvalue
+set HistoricalValue = 2500000, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2017
+where DGHID = '03-033-281' ;
+
+insert into tblnotes
+values ('03-033-281', 'Historical value updated estimated based on 250 per sq ft', '2017-10-15');
+update tblhistoricalvalue
+set HistoricalValue = 108734, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2016
+where DGHID = '03-033-0262' ;
+
+insert into tblnotes
+values ('03-033-0262', 'Historical value updated copied tv from other parcel on lot', '2017-10-15');
+update tblhistoricalvalue
+set HistoricalValue = 108734, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2016
+where DGHID = '03-033-0245' ;
+
+insert into tblnotes
+values ('03-033-0245', 'Historical value updated copied tv from other parcel on lot', '2017-10-15');
+
+
+
+
+update tbladdress
+set Title = 'MOB', Address = '1600 Canton Center South'
+where DGHID = '03-008-0177';
+
+
+update tbladdress
+set Title = 'SJMHS Clinical Lab', Address = 'N/A'
+where DGHID = '03-023-0214';
+
+update tbladdress
+set Title = 'Parcel 9-Center for Digestive Care', Address = 'N/A'
+where DGHID = '03-033-0262';
+
+update tbladdress
+set Title = '5315 Elliott Dr., Suites 101, 203,303', Address = 'N/A'
+where DGHID = '03-033-0265';
+
+
+
+
  
 update tblid i
 set i.PropertyID = "06-88-12-476-007"
@@ -167,5 +237,92 @@ where i.DGHID = '01-009-0108' ;
 
 insert into tblnotes
 values ('01-031-0144', 'updated values was hard coded last year this is what assessor listed it as but 100%', '2017-06-08');
+
+
+
+update tblhistoricalvalue
+set HistoricalValue = 4610040, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2015
+where DGHID = '03-026-0222' ;
+
+insert into tblnotes
+values ('03-026-0222', 'Used SEV as HV', '2017-10-27');
+
+update tblhistoricalvalue
+set HistoricalValue = 146800, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2015
+where DGHID = '03-009-0186' ;
+
+insert into tblnotes
+values ('03-009-0186', 'Used SEV as HV', '2017-10-27');
+
+update tblhistoricalvalue
+set HistoricalValue = 225940, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2015
+where DGHID = '03-009-0185' ;
+
+insert into tblnotes
+values ('03-009-0185', 'Used SEV as HV', '2017-10-27');
+
+update tblhistoricalvalue
+set HistoricalValue = 14600, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2015
+where DGHID = '03-039-0267' ;
+
+insert into tblnotes
+values ('03-039-0267', 'Used SEV as HV', '2017-10-27');
+
+update tblhistoricalvalue
+set HistoricalValue = 35200, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2015
+where DGHID = '03-039-0269' ;
+
+insert into tblnotes
+values ('03-039-0269', 'Used SEV as HV', '2017-10-27');
+
+update tblhistoricalvalue
+set HistoricalValue = 41700, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2015
+where DGHID = '03-039-0270' ;
+
+insert into tblnotes
+values ('03-039-0270', 'Used SEV as HV', '2017-10-27');
+
+update tblhistoricalvalue
+set HistoricalValue = 46000, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2015
+where DGHID = '03-039-0272' ;
+
+insert into tblnotes
+values ('03-039-0272', 'Used SEV as HV', '2017-10-27');
+
+update tblhistoricalvalue
+set HistoricalValue = 8794627, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2015
+where DGHID = '03-022-0205' ;
+
+insert into tblnotes
+values ('03-022-0205', 'Used SEV as HV', '2017-10-27');
+
+update tblhistoricalvalue
+set HistoricalValue = 22000000, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2015
+where DGHID = '03-020-0201' ;
+
+insert into tblnotes
+values ('03-020-0201', 'Cost of construction $250 sq ft', '2017-10-27');
+
+update tblhistoricalvalue
+set HistoricalValue = 261300, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2015
+where DGHID = '03-020-0202' ;
+
+insert into tblnotes
+values ('03-020-0202', 'Used SEV as HV', '2017-10-27');
+
+update tblhistoricalvalue
+set HistoricalValue = 27650, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2008
+where DGHID = '03-022-0211' ;
+
+insert into tblnotes
+values ('03-022-0211', 'Used SEV as HV', '2017-10-27');
+
+
+update tblhistoricalvalue
+set HistoricalValue = 3613656.15, iHistoricalValueEstimated = 1 ,HistoricalValueYear =2008
+where DGHID = '03-033-0240' ;
+
+insert into tblnotes
+values ('03-033-0240', 'Used SEV as HV', '2017-10-27');
 
 */
